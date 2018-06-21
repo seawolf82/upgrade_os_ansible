@@ -1,0 +1,17 @@
+
+- hosts: centos-servers
+  remote_user: root
+  roles:
+    - centos
+
+
+- hosts: fedora-servers
+  remote_user: root
+  roles:
+    - fedora
+
+
+- hosts: ubuntu-servers
+  become: yes
+  roles:
+    - ubuntu

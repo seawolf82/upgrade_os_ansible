@@ -1,0 +1,15 @@
+---
+
+- name: upgrade all packages 
+  apt:
+    name: "*"
+    state: latest
+    update_cache: no
+    force_apt_get: yes
+
+- name: Install htop
+  package: 
+    name: htop
+    state: present
+
+

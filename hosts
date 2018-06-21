@@ -1,0 +1,8 @@
+[centos-servers]
+nightwolf.localdomain
+
+[fedora-servers]
+tigershark.localdomain
+
+[ubuntu-servers]
+artemide.localdomain
