@@ -4,21 +4,21 @@
   yum:
     name: "*"
     state: latest
-  tags: centos  
+  tags: upgrade
 
 
 - name: Install epel package
   package: 
     name: epel-release
     state: present
-  tags: centos  
+  tags: package  
 
 
 - name: Install htop
   package: 
     name: htop
     state: present
-  tags: centos  
+  tags: package  
 
 
 - name: ensure a list of packages installed
