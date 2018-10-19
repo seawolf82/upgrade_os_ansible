@@ -4,17 +4,60 @@
   yum:
     name: "*"
     state: latest
+  tags: centos  
 
 
 - name: Install epel package
   package: 
     name: epel-release
     state: present
+  tags: centos  
 
 
 - name: Install htop
   package: 
     name: htop
     state: present
+  tags: centos  
+
+
+- name: ensure a list of packages installed
+  yum:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - wget
+    - curl
+    - bash-completion
+    - vim
+    - zip
+    - bzip2
+    - gzip
+    - net-tools
+    - yum-utils
+  tags: package
+
+
+- name: Ensure tzdata package is installed (Linux).
+  package:
+    name: tzdata
+    state: present
+  tags: package
+
+- name: Ensure rsyslog package is installed
+  package:
+    name: rsyslog
+    state: present
+  tags: package
+
+
+- name: Ensure rsyslog is running and enabled as configured
+  service:
+    name: rsyslog
+    state: started
+    enabled: yes
+  tags: package
+
+
 
 

@@ -13,5 +13,12 @@
 
 - hosts: ubuntu-servers
   become: yes
+  become_user: seawolf
+  become_method: sudo
   roles:
     - ubuntu
+
+- hosts: debian-servers
+  become: yes
+  roles:
+    - debian

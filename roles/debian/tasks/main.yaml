@@ -1,14 +1,15 @@
 ---
 
 - name: upgrade all packages 
-  dnf:
+  apt:
     name: "*"
     state: latest
-  tags: fedora  
+    update_cache: no
+    force_apt_get: yes
 
-- name: install htop 
-  dnf:
+- name: Install htop
+  package: 
     name: htop
     state: present
-  tags: fedora  
+
 

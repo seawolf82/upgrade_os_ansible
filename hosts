@@ -5,4 +5,7 @@ nightwolf.localdomain
 tigershark.localdomain
 
 [ubuntu-servers]
-artemide.localdomain
+artemide
+
+[debian-servers]
+horus
